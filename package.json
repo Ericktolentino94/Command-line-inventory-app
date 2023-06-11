@@ -10,6 +10,7 @@
     "index": "node index.js index",
     "create": "node index.js create",
     "show": "node index.js show",
+    "destroy": "node index.js destroy",
     "update": "node index.js update"
   },
   "keywords": [],

@@ -3,6 +3,7 @@ const { create,
         index,
         show,
         update,
+        destroy,
 } = require("./src/purchases-controller.js")
 
 const run = () => {
@@ -22,12 +23,15 @@ const run = () => {
             break;
         case "show" : 
             const foundPurchase = show(purchaseData, purchase)
-            writeToFile = true;
+            console.log(foundPurchase)
             break;
         case "update" :
             updatedPurchaseData = update(purchaseData, purchase, process.argv[4]);
             writeToFile = true;
             break;
+            case "destroy" :
+                updatedPurchaseData = destroy(purchaseData, purchase);
+                writeToFile = true;
             default:
                 console.log("there was an error")
     }
