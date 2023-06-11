@@ -1,17 +1,1 @@
-const { readFileSync, writeFileSync } = require("node:fs");
-
-function readJSONFile(path, fileName) {
-  const object = readFileSync(`${path}/${fileName}`, "utf8");
-  return object ? JSON.parse(object) : [];
-}
-
-function writeJSONFile(path, fileName, data) {
-  data = JSON.stringify(data);
-  return writeFileSync(`${path}/${fileName}`, data, { encoding: "utf-8" });
-}
-
-module.exports = {
-  readJSONFile,
-  writeJSONFile,
-};
-
+[{"id":"Fxcq","name":"pencil","priceInCents":"948.00","inStock":true,"item":"Gloves"},{"id":"E1F7","priceInCents":"603.00","inStock":true,"item":"Computer"},{"id":"DCT_","name":"1","priceInCents":"469.00","inStock":true,"item":"Bike"}]
