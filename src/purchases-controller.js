@@ -1,6 +1,5 @@
 const { nanoid } = require("nanoid") ;
 const { faker } = require("@faker-js/faker") ;
-const purchaseUpdated = require("../data/purchases-price.json");
 
 function create(purchases, purchaseName) {
     const purchase = {
@@ -14,7 +13,7 @@ function create(purchases, purchaseName) {
     return purchases
 }
 
-function index(purchases) {
+function index(purchases, sneakerPrice) {
     return purchases.map((purchase) => purchase.id + " " + 
 purchase.name).join("\n")
 }
@@ -42,7 +41,7 @@ function update( purchases, purchaseId, updatedPurchase) {
     if (index > -1) {
         purchases[index].id = purchaseId;
         purchases[index].name = updatedPurchase;
-        purchases[index].priceInCents = purchaseUpdated[updatedPurchase];
+        purchases[index].priceInCents = purchases.priceInCents
         purchases[index].inStock = purchases.inStock;
         return purchases
     } else {
@@ -50,10 +49,13 @@ function update( purchases, purchaseId, updatedPurchase) {
     }
 }
 
+
+
 module.exports = {
     create,
     index,
     show,
     destroy,
     update,
+    
 }

@@ -5,11 +5,15 @@ const { create,
         update,
         destroy,
 } = require("./src/purchases-controller.js")
+// const { addToCart,
+//     showCart,
+//     emptyCart,} = require("../src/sneakerCart-controller.js")
 
 const run = () => {
     const action = process.argv[2];
     const purchase = process.argv[3]
     let purchaseData = readJSONFile("./data", "purchases-data.json");
+    // let sneakerInventory = readJSONFile(".", "data/purchases-price.json" );
     let writeToFile = false;
     let updatedPurchaseData = [];
     switch(action) {
@@ -32,6 +36,9 @@ const run = () => {
             case "destroy" :
                 updatedPurchaseData = destroy(purchaseData, purchase);
                 writeToFile = true;
+            // case: "addToCart" :
+            //     updatedPurchaseData = addToCart(sneakerInventory,)
+
             default:
                 console.log("there was an error")
     }
