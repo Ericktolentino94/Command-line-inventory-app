@@ -1,21 +1,29 @@
-const { nanoid } = require("nanoid") ;
-const { faker } = require("@faker-js/faker") ;
-const sneakerCart = require("../data/shopping-cart.json");
+const { writeJSONFile, readJSONFile } = require("./helpers");
+const sneakerCart = readJSONFile(".", "data/shopping-cart.json")
 
-function addToCart () {
+function addToCart(purchases, sneakerCart, purchaseQuantity) {
+    if (purchases[0].inStock) {
+      const newCartProduct = {
+        name: purchases.name,
+        amount: purchaseQuantity,
+        total: purchases[0].priceInCents * purchaseQuantity,
+      };
+      sneakerCart.push(newCartProduct);
+      writeJSONFile("./data", "shopping-cart.json");
+      return sneakerCart;
+    }
+  }
 
-}
+  function emptyCart(){
 
-function showCartPrice () {
+  }
 
-}
+  function showTotalPrice(){
 
-function emptyCart () {
-    
-}
+  }
 
-exports.module = {
+  module.exports = {
     addToCart,
-    showCartPrice,
     emptyCart,
-}
+    showTotalPrice,
+  }

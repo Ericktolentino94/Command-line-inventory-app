@@ -11,7 +11,8 @@
     "create": "node index.js create",
     "show": "node index.js show",
     "destroy": "node index.js destroy",
-    "update": "node index.js update"
+    "update": "node index.js update",
+    "addToCart" : "node index.js addToCart"
   },
   "keywords": [],
   "author": "Erick Tolentino",
