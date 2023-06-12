@@ -2,13 +2,13 @@ const { writeJSONFile, readJSONFile } = require("./helpers");
 const sneakerCart = readJSONFile("./data", "shopping-cart.json")
 
 function getInventory() {
+    console.log(getInventory)
     const purchases = readJSONFile("./data", "inventory-data.json");
     return purchases
 }
 
 function getCartPurchases () {
     const cartPurchases = readJSONFile("./data", "shopping-cart.json")
-    console.log(cartPurchases)
     return cartPurchases
     
 }
