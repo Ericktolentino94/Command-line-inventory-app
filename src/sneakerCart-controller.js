@@ -14,9 +14,9 @@ function getCartPurchases () {
 function addToCart(productId, purchaseQuantity) {
     const cart = getInventory ();
     const purchases = cart.find((purchase) => purchase.id === productId);
-    console.log(purchases)
     if (purchases.inStock) {
       const sneakerCart = getCartPurchases();
+      console.log(sneakerCart)
       const newCartProduct = {
         name: purchases.name,
         amount: purchaseQuantity,
