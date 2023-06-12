@@ -1,6 +1,6 @@
 # Command-line-inventory-app
 
-I have created a sneaker inventory app that creates new items for a store, updates the items, shows all the items available by and their unique id, and finally it can show the full details of a single sneaker or delete it completely from our inventory data using its Id.
+I have created a sneaker inventory app that creates new items for a store, updates the items, shows all the items available by and their unique id, and finally it can show the full details of a single sneaker or delete it completely from our inventory data using its unique Id.
 
 ## How to create a new product
 
@@ -48,3 +48,13 @@ Original object: [{"id":"-vF3","name":"Air Jordan 1","priceInCents":"743.00","in
 node index.js update -vF3 "Air Jordan 13"
 ```
 updated object: {"id":"-vF3","name":"Air Jordan 13","priceInCents":"743.00","inStock":true}
+
+## How to delete a sneaker from our inventory
+
+If we want to delete a sneaker from our inventory we will run node index.js destroy "id" and this will remove the sneaker from our list.
+
+### Example for delete
+
+```
+node index.js destroy "-vF3"
+```
