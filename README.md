@@ -10,7 +10,7 @@ If we want to create a new product we will type node index.js create "Product Na
 
 {"id":"EfQj","name":"Air Jordan 1","priceInCents":"495.00","inStock":true}
 ```
-node index.js "Air Jordan 1"
+node index.js create "Air Jordan 1"
 ```
 
 ## How to index and show all the products in our inventory list
@@ -28,7 +28,7 @@ ZMwr Air force 12
 bqqo Air Jordan 23
 sXX7 Air jordan 30
 ```
-node index.js
+node index.js index
 ```
 
 ### Example for show
