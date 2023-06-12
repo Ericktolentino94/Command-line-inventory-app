@@ -37,4 +37,14 @@ node index.js
 ```
 node index.js show "54YE"
 ```
+## How to Update an inventory name
 
+If you want to update the name of a sneaker in the inventory we will run node index.js "id" "new sneaker name", this will replace the sneaker name in our inventory.
+
+### Example for update
+
+Original object: [{"id":"-vF3","name":"Air Jordan 1","priceInCents":"743.00","inStock":true}
+```
+node index.js update -vF3 "Air Jordan 13"
+```
+updated object: {"id":"-vF3","name":"Air Jordan 13","priceInCents":"743.00","inStock":true}

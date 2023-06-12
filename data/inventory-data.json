@@ -1,8 +1,38 @@
-[{"id":"-vF3","name":"Air jordan 5","priceInCents":"743.00","inStock":true},
-{"id":"54YE","name":"Foam Runner","priceInCents":"733.00","inStock":true},
-{"id":"NWAV","name":"New Balance","priceInCents":"445.00","inStock":true},
-{"id":"EfQj","name":"Air Jordan 1","priceInCents":"495.00","inStock":true},
-{"id":"LKXd","name":"Air Force 1","priceInCents":"393.00","inStock":true},
-{"id":"ZMwr","name":"Air force 12","priceInCents":"915.00","inStock":true},
-{"id":"bqqo","name":"Air Jordan 23","priceInCents":"633.00","inStock":true},
-{"id":"sXX7","name":"Air jordan 30","priceInCents":"815.00","inStock":true}]
+[
+  {
+    "id": "-vF3",
+    "name": "Air Jordan 1",
+    "priceInCents": "743.00",
+    "inStock": true
+  },
+  {
+    "id": "54YE",
+    "name": "Foam Runner",
+    "priceInCents": "733.00",
+    "inStock": true
+  },
+  {
+    "id": "NWAV",
+    "name": "BB550",
+    "priceInCents": "445.00",
+    "inStock": true
+  },
+  {
+    "id": "bqqo",
+    "name": "Air Jordan 23",
+    "priceInCents": "633.00",
+    "inStock": true
+  },
+  {
+    "id": "sXX7",
+    "name": "Air jordan 30",
+    "priceInCents": "815.00",
+    "inStock": true
+  },
+  {
+    "id": "A_Yz",
+    "name": "Air Force",
+    "priceInCents": "696.00",
+    "inStock": true
+  }
+]

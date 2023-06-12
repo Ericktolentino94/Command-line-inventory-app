@@ -1,6 +1,6 @@
 const { nanoid } = require("nanoid");
 const { faker } = require("@faker-js/faker");
-const sneakerCart = require("../data/shopping-cart.json");
+// const sneakerCart = require("../data/shopping-cart.json");
 const { writeJSONFile } = require("./helpers");
 
 function create(purchases, purchaseName) {
@@ -9,7 +9,6 @@ function create(purchases, purchaseName) {
     name: purchaseName,
     priceInCents: faker.commerce.price(),
     inStock: true,
-    // item: faker.commerce.product(),
   };
   purchases.push(purchase);
   return purchases;
@@ -48,16 +47,17 @@ function destroy(purchases, purchaseId) {
   }
 }
 
-function update(purchases, purchaseId, updatedPurchaseName, updatedPrice) {
+function update(purchases, purchaseId, updatedPurchaseName) {
   const index = purchases.findIndex((purchase) => purchase.id === purchaseId);
 
   if (index > -1) {
     purchases[index].id = purchaseId;
     purchases[index].name = updatedPurchaseName;
-    purchases[index].priceInCents = updatedPrice;
+    console.log("Inventory name successfully updated")
     return purchases;
   } else {
     console.log("couldnt find a product with that id");
+    return purchases
   }
 }
 

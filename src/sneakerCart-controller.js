@@ -1,18 +1,34 @@
 const { writeJSONFile, readJSONFile } = require("./helpers");
-const sneakerCart = readJSONFile(".", "data/shopping-cart.json")
+const sneakerCart = readJSONFile("./data", "shopping-cart.json")
 
-function addToCart(purchases, sneakerCart, purchaseQuantity) {
-    if (purchases[0].inStock) {
+function getInventory() {
+    const purchases = readJSONFile("./data", "inventory-data.json");
+    return purchases
+}
+
+function getCartPurchases () {
+    const cartPurchases = readJSONFile("./data", "shopping-cart.json")
+    return cartPurchases
+}
+
+function addToCart(productId, purchaseQuantity) {
+    const cart = getInventory ();
+    const purchases = cart.find((purchase) => purchase.id === productId);
+    console.log(purchases)
+    if (purchases.inStock) {
+      const sneakerCart = getCartPurchases();
       const newCartProduct = {
         name: purchases.name,
         amount: purchaseQuantity,
-        total: purchases[0].priceInCents * purchaseQuantity,
+        // total: sneakerCart[0].priceInCents * purchaseQuantity,
       };
-      sneakerCart.push(newCartProduct);
+      cart.push(newCartProduct);
       writeJSONFile("./data", "shopping-cart.json");
       return sneakerCart;
+    } else {
+        return "Product does not exist or is no longer available"
     }
-  }
+  };
 
   function emptyCart(){
 
