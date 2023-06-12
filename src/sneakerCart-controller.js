@@ -8,7 +8,9 @@ function getInventory() {
 
 function getCartPurchases () {
     const cartPurchases = readJSONFile("./data", "shopping-cart.json")
+    console.log(cartPurchases)
     return cartPurchases
+    
 }
 
 function addToCart(productId, purchaseQuantity) {
@@ -16,7 +18,6 @@ function addToCart(productId, purchaseQuantity) {
     const purchases = cart.find((purchase) => purchase.id === productId);
     if (purchases.inStock) {
       const sneakerCart = getCartPurchases();
-      console.log(sneakerCart)
       const newCartProduct = {
         name: purchases.name,
         amount: purchaseQuantity,
